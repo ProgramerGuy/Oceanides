@@ -12,9 +12,11 @@ import { ApplyComponent } from './pages/apply/apply.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
 import { DxResponsiveBoxModule } from 'devextreme-angular';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
+    HomeComponent,
     AppComponent,
     MissionComponent,
     ApplyComponent,

@@ -1,3 +1,17 @@
-<div data-aos="zoom-in">
-    <iframe src="https://drive.google.com/file/d/1zFeyW1ZUfeL0ByQ5ZjkUfHqQFcyGqd0u/preview" width="640" height="480" allow="autoplay"></iframe>
-</div>
+<dx-responsive-box>
+    <dxi-row [ratio]="1"></dxi-row>
+    <dxi-row [ratio]="2" [shrink]="2"></dxi-row>
+    <dxi-row [ratio]="0.7"></dxi-row>
+    <dxi-col [ratio]="0.5" [shrink]="0.5"></dxi-col>
+
+    <dxi-col [ratio]="2" screen="md lg">
+    </dxi-col>
+    <dxi-col [ratio]="0.5" screen="md lg"></dxi-col>
+
+    <dxi-item class="content">
+        <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
+        <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
+
+        <iframe data-aos="fade-down" src="https://drive.google.com/file/d/1zFeyW1ZUfeL0ByQ5ZjkUfHqQFcyGqd0u/preview" width="640" height="480" allow="autoplay"></iframe>
+    </dxi-item>
+</dx-responsive-box>
