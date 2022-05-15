@@ -7,18 +7,19 @@ import { FooterModule, ResetPasswordFormModule, CreateAccountFormModule, ChangeP
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
-import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
 import { MissionComponent } from './pages/mission/mission.component';
 import { ApplyComponent } from './pages/apply/apply.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
+import { DxResponsiveBoxModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WhoWeAreComponent,
     MissionComponent,
     ApplyComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    WhoWeAreComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     ChangePasswordFormModule,
     LoginFormModule,
     UnauthenticatedContentModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DxResponsiveBoxModule
   ],
   providers: [
     AuthService,
