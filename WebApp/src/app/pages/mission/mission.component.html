@@ -1,1 +1,28 @@
-<p>mission works!</p>
+<dx-responsive-box>
+    <dxi-row [ratio]="1"></dxi-row>
+    <dxi-row [ratio]="2" [shrink]="2"></dxi-row>
+    <dxi-row [ratio]="0.7"></dxi-row>
+    <dxi-col [ratio]="0.5" [shrink]="0.5"></dxi-col>
+
+    <dxi-col [ratio]="2" screen="md lg">
+    </dxi-col>
+    <dxi-col [ratio]="0.5" screen="md lg"></dxi-col>
+
+    <dxi-item class="content">
+        <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
+        <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
+
+        <h3 data-aos="fade-left">Our Mission</h3>
+        <p class="main-data" data-aos="fade-down">
+            According to the report presented in 2017 by the United Nations Marine Conference, 8 million tons (Mt) of plastic enter our oceans every year.
+            This is like throwing a trash truck every minute,  not only spreading throughout the seas but affecting the wildlife and the ecosystems.
+            Recycling has now become insufficient because of the amount of materials that are   produced every year, and a small solution that has no long impact,
+            due to the fact that a lot of those recycled objects will inevitably become garbage again.
+        </p>
+        <p class="main-data" data-aos="fade-down">
+            Our mission then, is to use ideas that help us keep
+            the plastic materials away from the aquifer mantles, have a social impact, make a tutoring/accompaniment process, present it to our multiple international
+            sponsors and apply that solution. 
+        </p>
+    </dxi-item>
+</dx-responsive-box>
