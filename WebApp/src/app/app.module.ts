@@ -11,7 +11,7 @@ import { MissionComponent } from './pages/mission/mission.component';
 import { ApplyComponent } from './pages/apply/apply.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
-import { DxResponsiveBoxModule } from 'devextreme-angular';
+import { DxListModule, DxResponsiveBoxModule } from 'devextreme-angular';
 import { HomeComponent } from './pages/home/home.component';
 import { MainService } from './shared/services/main.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -38,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     UnauthenticatedContentModule,
     AppRoutingModule,
     DxResponsiveBoxModule,
+    DxListModule,
     HttpClientModule
   ],
   providers: [

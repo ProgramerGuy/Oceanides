@@ -12,6 +12,74 @@
         <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
         <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
 
-        <iframe data-aos="fade-down" src="https://drive.google.com/file/d/1zFeyW1ZUfeL0ByQ5ZjkUfHqQFcyGqd0u/preview" width="640" height="480" allow="autoplay"></iframe>
+        <div class="display-divide-container" style="height: 400px;">
+            <div class="display-main-left">
+                <iframe data-aos="fade-down" src="https://drive.google.com/file/d/1zFeyW1ZUfeL0ByQ5ZjkUfHqQFcyGqd0u/preview" width="100%" height="80%" allow="autoplay"></iframe>
+            </div>
+            <div class="display-main-right">
+
+            </div>
+        </div>
+
+
+        <h4>Do you want to know more about materials?</h4>
+
+        <div class="main-data-container">
+            <div class="container-data">
+                <dx-list
+                data-aos="fade-left"
+                #list
+                [dataSource]="dsPlastics"
+                [height]="400"
+                selectionMode="single"
+                [showSelectionControls]="false"
+                (onItemClick)="platics_onItemClick($event)"
+            >
+                <div *dxTemplate="let item of 'item'">
+                    <div class="product">
+                    <div>{{ item.name }}</div>
+                </div>
+              </div>
+            </dx-list>
+            </div>
+            <div class="container-detail">
+                <div *ngIf="selectedPlasticItem !== null" class="dx-card card-container" data-aos="flip-left">
+                    <div class="main-icon">
+                        <div class="data-icon">
+                            {{ selectedPlasticItem?.recylelevel  }}
+                        </div>
+                        <p>Recyclable Level</p>
+                    </div>
+                    <div>
+                        <p class="card-title">
+                            {{ selectedPlasticItem?.name | uppercase  }}
+                        </p>
+                    </div>
+                    <img [src]="'../../../assets/Pet' + selectedPlasticItem.recylelevel + '.png'" alt="">
+                    <div class="card-info-container">
+                        <div class="card-info-seccion">
+                            <p>Properties:</p>
+                            <ul>
+                                <li *ngFor="let item of selectedPlasticItem.specs">{{ item }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-info-seccion">
+                            <p>Can use for:</p>
+                            <ul>
+                                <li *ngFor="let item of selectedPlasticItem.usedin">{{ item }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-extra-container">
+                        <span>
+                            Recyclable
+                        </span> 
+                        <img src="'../../../assets/check.png" width="30px" alt="yes" *ngIf="selectedPlasticItem.recyclable">
+                        <img src="'../../../assets/error.png" width="30px" alt="yes" *ngIf="!selectedPlasticItem.recyclable">
+                    </div>
+                </div>
+            </div>
+        </div>
     </dxi-item>
 </dx-responsive-box>

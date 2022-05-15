@@ -14,4 +14,8 @@ export class MainService {
     return this.httpCliente.get<any[]>(`${this.url}/Plastics/list`);
   }
 
+  public getGraphInfo() {
+    return this.httpCliente.get<any[]>(`${this.url}/Graphic/graph`);
+  }
+
 }
