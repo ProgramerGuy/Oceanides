@@ -13,6 +13,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
 import { DxResponsiveBoxModule } from 'devextreme-angular';
 import { HomeComponent } from './pages/home/home.component';
+import { MainService } from './shared/services/main.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,14 @@ import { HomeComponent } from './pages/home/home.component';
     LoginFormModule,
     UnauthenticatedContentModule,
     AppRoutingModule,
-    DxResponsiveBoxModule
+    DxResponsiveBoxModule,
+    HttpClientModule
   ],
   providers: [
     AuthService,
     ScreenService,
-    AppInfoService
+    AppInfoService,
+    MainService
   ],
   bootstrap: [AppComponent]
 })

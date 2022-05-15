@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from 'src/app/shared/services/main.service';
 
 @Component({
   templateUrl: 'home.component.html',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-  constructor() {}
+  constructor(private mainService: MainService) {
+    this.getPlastics();
+  }
+
+  public getPlastics() {
+    this.mainService.getPlasticsInfo().subscribe( (res: any) => {
+      console.log(res);
+    })
+  }
 }
