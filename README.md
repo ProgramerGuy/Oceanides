@@ -56,3 +56,16 @@ https://github.com/ghector6/Oceanides-Backend-Methods.git
 ## Capturas de la aplicacion
 
 ### Home/ Landing page
+![do-it-yourself-tools](./images/home.gif)
+
+### Who we are
+![do-it-yourself-tools](./images/whoweare.gif)
+
+### Mission
+![do-it-yourself-tools](./images/mission.gif)
+
+### How to apply
+![do-it-yourself-tools](./images/apply.gif)
+
+### Project
+![do-it-yourself-tools](./images/projects.gif)
