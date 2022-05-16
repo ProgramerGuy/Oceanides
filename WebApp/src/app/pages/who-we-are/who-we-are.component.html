@@ -1,0 +1,21 @@
+<dx-responsive-box>
+    <dxi-row [ratio]="1"></dxi-row>
+    <dxi-row [ratio]="2" [shrink]="2"></dxi-row>
+    <dxi-row [ratio]="0.7"></dxi-row>
+    <dxi-col [ratio]="0.5" [shrink]="0.5"></dxi-col>
+
+    <dxi-col [ratio]="2" screen="md lg">
+    </dxi-col>
+    <dxi-col [ratio]="0.5" screen="md lg"></dxi-col>
+
+    <dxi-item class="content">
+        <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
+        <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
+        <h3 data-aos="fade-left">Who we are</h3>
+        <p class="main-data" data-aos="fade-down">
+            We are an organization committed to create bridges between grat ideas and sponsors in order to make them a reallity.
+            Through our users ideas our team of exprerts will analyze and create a complete project to help that idea reach one of
+            our multiple sponsors in order to build a viable and applicable solution to save our seas
+        </p>
+    </dxi-item>
+</dx-responsive-box>

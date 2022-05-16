@@ -1,3 +1,131 @@
-<div data-aos="flip-right">
-    
-</div>
+<dx-responsive-box>
+    <dxi-row [ratio]="1"></dxi-row>
+    <dxi-row [ratio]="2" [shrink]="2"></dxi-row>
+    <dxi-row [ratio]="0.7"></dxi-row>
+    <dxi-col [ratio]="0.5" [shrink]="0.5"></dxi-col>
+
+    <dxi-col [ratio]="2" screen="md lg">
+    </dxi-col>
+    <dxi-col [ratio]="0.5" screen="md lg"></dxi-col>
+
+    <dxi-item class="content">
+        <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
+        <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
+
+        <h1>DISCOVER HOW YOU CAN CREATE A BETTER FUTURE.</h1>
+
+        <div class="display-divide-container" style="height: 400px;">
+            <div class="display-main-left">
+                <h4>Join Oceanides and become a sponsor/partner of one of our programs, or create a new one.</h4>
+                <dx-button
+                style="font-size: 22px;"
+                    stylingMode="contained"
+                    text="Join Now"
+                    type="normal"
+                    [width]="420"
+                    [height]="70"
+                    (onClick)="join_onClick()"
+                >
+                </dx-button>
+            </div>
+            <div class="display-main-right">
+                <iframe src="https://drive.google.com/file/d/1M9BQBaFBZo5WYpuBZAZW0j4V4uCZL-lc/preview"  width="100%" height="80%" allow="autoplay"></iframe>
+            </div>
+        </div>
+
+        <div class="display-divide-container" style="height: 400px;">
+            <div class="display-main-left">
+                <iframe src="https://drive.google.com/file/d/1zFeyW1ZUfeL0ByQ5ZjkUfHqQFcyGqd0u/preview" width="100%" height="80%" allow="autoplay"></iframe>
+            </div>
+            <div class="display-main-right display-data">
+                <h4>How important are our oceans?</h4>
+
+                <p>
+                    Our ocean produces more than 50% of the world's oxygen and is capable of absorbing over 50 times more carbon dioxide than our atmosphere. Not only that, 70% of our oceans are capable of regulating our climate and weather patterns, it helps fish to move, and creates new ecosystems. This brings us great benefits, such as food, medicines and economical benefits. 
+                </p>
+                <p>
+                    Ocean is the home of over 700,000 marine species, about 284,300 km2 of reef extensions. 
+                </p>
+            </div>
+        </div>
+
+        <div class="display-data">
+            <h4> GALLERY: </h4>
+            <p>
+                
+                See one of our biggest projects.
+                
+                
+                Creating houses out of a plastic brick in order to keep plastic out of our Oceans
+                
+                How crazy does that sound? 
+                
+                Learn More About it <a [routerLink]="['/projects']">Here</a>:
+            </p>
+            <div class="images-showdown">
+                <img src="../../../assets/pj5.png" width="20%" alt="">
+                <img src="../../../assets/pj6.png" width="20%" alt="">
+                <img src="../../../assets/pj7.png" width="20%" alt="">
+            </div>
+        </div>
+
+        <h4>Do you want to know more about materials?</h4>
+
+        <div class="main-data-container">
+            <div class="container-data">
+                <dx-list
+                #list
+                [dataSource]="dsPlastics"
+                [height]="400"
+                selectionMode="single"
+                [showSelectionControls]="false"
+                (onItemClick)="platics_onItemClick($event)"
+            >
+                <div *dxTemplate="let item of 'item'">
+                    <div class="product">
+                    <div>{{ item.name }}</div>
+                </div>
+              </div>
+            </dx-list>
+            </div>
+            <div class="container-detail">
+                <div *ngIf="selectedPlasticItem !== null" class="dx-card card-container" >
+                    <div class="main-icon">
+                        <div class="data-icon">
+                            {{ selectedPlasticItem?.recylelevel  }}
+                        </div>
+                        <p>Recyclable Level</p>
+                    </div>
+                    <div>
+                        <p class="card-title">
+                            {{ selectedPlasticItem?.name | uppercase  }}
+                        </p>
+                    </div>
+                    <img [src]="'../../../assets/Pet' + selectedPlasticItem.recylelevel + '.png'" alt="">
+                    <div class="card-info-container">
+                        <div class="card-info-seccion">
+                            <p>Properties:</p>
+                            <ul>
+                                <li *ngFor="let item of selectedPlasticItem.specs">{{ item }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-info-seccion">
+                            <p>Can use for:</p>
+                            <ul>
+                                <li *ngFor="let item of selectedPlasticItem.usedin">{{ item }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-extra-container">
+                        <span>
+                            Recyclable
+                        </span> 
+                        <img src="'../../../assets/check.png" width="30px" alt="yes" *ngIf="selectedPlasticItem.recyclable">
+                        <img src="'../../../assets/error.png" width="30px" alt="yes" *ngIf="!selectedPlasticItem.recyclable">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dxi-item>
+</dx-responsive-box>
