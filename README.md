@@ -53,3 +53,6 @@ https://github.com/ghector6/Oceanides-Backend-Methods.git
 
 [![](https://mermaid.ink/img/pako:eNplkEEKwjAQRa8yzNb2AsVd9QK6zWZIRhtIGkmmgtTe3di00OosQvj__c8wI-pgGBvUjlI6WbpH8qqHPFeOT45wfNc1PLIrVrehlxic41iQ8v6Zu8y3xmreoYs2YxcmkyOwbZyX-YHHYgEcIAllHTxLF0wq-rRNwtK6yRSh_dqruAuWwQo9R0_W5JPMaYXSsWeFTf4avtHgRKHqp4wOD0PCZ2MlRGxu5BJXSIOE66vX2EgceIWWyy7U9AG-5HlH)](https://mermaid.live/edit#pako:eNplkEEKwjAQRa8yzNb2AsVd9QK6zWZIRhtIGkmmgtTe3di00OosQvj__c8wI-pgGBvUjlI6WbpH8qqHPFeOT45wfNc1PLIrVrehlxic41iQ8v6Zu8y3xmreoYs2YxcmkyOwbZyX-YHHYgEcIAllHTxLF0wq-rRNwtK6yRSh_dqruAuWwQo9R0_W5JPMaYXSsWeFTf4avtHgRKHqp4wOD0PCZ2MlRGxu5BJXSIOE66vX2EgceIWWyy7U9AG-5HlH)
 
+## Capturas de la aplicacion
+
+### Home/ Landing page
