@@ -58,6 +58,8 @@ https://github.com/ghector6/Oceanides-Backend-Methods.git
 ### Home/ Landing page
 ![do-it-yourself-tools](./images/home.gif)
 
+**Esta seccion cuenta con la comunicacion al proyecto de endpoint en la seccion de materiales al final de la pagina**
+
 ### Who we are
 ![do-it-yourself-tools](./images/whoweare.gif)
 
