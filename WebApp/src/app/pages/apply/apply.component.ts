@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplyComponent implements OnInit {
 
+  public message: any;
+  public userType: any;
+
   constructor() { }
 
   ngOnInit(): void {

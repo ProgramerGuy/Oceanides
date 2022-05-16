@@ -18,5 +18,29 @@
             that applies to this list of plastic materials. If you have a viable solution to keep one of those plastic materials out of our oceans
             for a long time  please complete the information of the form. Our experts will receive your proposal and notice you as soon as possible.  
         </p>
+
+        <div>
+            <dx-form id="form" [formData]="message" height="600px">
+                <dxi-item dataField="name" [label]="{text: 'Name'}"></dxi-item>
+                <dxi-item dataField="contact"></dxi-item>
+                <dxi-item
+                dataField="userType"
+                editorType="dxSelectBox"
+                [editorOptions]="{ items: userType }"
+                [label]="{text: 'Company or Sponsor'}"
+                ></dxi-item>
+                <dxi-item dataField="message" editorType="dxTextArea"
+                [editorOptions]="{ height: 110 }"></dxi-item>
+              </dx-form>
+              <dx-button
+                style="font-size: 22px;"
+                    stylingMode="contained"
+                    text="Send"
+                    type="normal"
+                    [width]="300"
+                    [height]="50"
+                >
+                </dx-button>
+        </div>
     </dxi-item>
 </dx-responsive-box>

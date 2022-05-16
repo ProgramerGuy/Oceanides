@@ -1,3 +1,8 @@
+h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
 .logos-container {
   margin: 20px 0 40px 0;
   text-align: center;
@@ -62,6 +67,7 @@
   align-items: center;
   flex-direction: column;
   padding-top: 35px;
+  position: relative;
 
   .card-title {
     font-weight: 600;
@@ -125,4 +131,16 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+
+.display-data {
+  font-size: 18px;
+}
+
+.images-showdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
