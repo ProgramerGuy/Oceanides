@@ -1,21 +1,26 @@
 <header>
   <dx-toolbar class="header-toolbar">
-    <dxi-item
-      *ngIf="menuToggleEnabled"
-      location="before"
-      widget="dxButton"
-      cssClass="menu-button"
-      [options]="{
-        icon: 'menu',
-        stylingMode: 'text',
-        onClick: toggleMenu
-      }">
+    <dxi-item location="before"
+    widget="dxButton"
+    locateInMenu="never">
+      <div *dxTemplate class="logo">
+        <img width="18%" src="./../../../../assets/oceanidesLogo.png" alt="">
+      </div>
     </dxi-item>
     <dxi-item
-      location="before"
-      cssClass="header-title"
-      *ngIf="title"
+      location="center"
       [text]="title">
+      <div *dxTemplate >
+        <dx-menu
+        #menu
+        [dataSource]="menuData"
+        displayExpr="name"
+        orientation="horizontal"
+        [hideSubmenuOnMouseLeave]="false"
+        (onItemClick)="menu_onItemClick($event)"
+        >
+        </dx-menu>
+      </div>
     </dxi-item>
     <dxi-item
       location="after"

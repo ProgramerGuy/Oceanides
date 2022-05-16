@@ -1,0 +1,46 @@
+<dx-responsive-box>
+    <dxi-row [ratio]="1"></dxi-row>
+    <dxi-row [ratio]="2" [shrink]="2"></dxi-row>
+    <dxi-row [ratio]="0.7"></dxi-row>
+    <dxi-col [ratio]="0.5" [shrink]="0.5"></dxi-col>
+
+    <dxi-col [ratio]="2" screen="md lg">
+    </dxi-col>
+    <dxi-col [ratio]="0.5" screen="md lg"></dxi-col>
+
+    <dxi-item class="content">
+        <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
+        <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
+
+        <h3 data-aos="fade-left">How to apply</h3>
+        <p class="main-data" data-aos="fade-down">
+            We´re glad you are interested in helping our world. You can apply with an idea by completing our form. You need to include a solution
+            that applies to this list of plastic materials. If you have a viable solution to keep one of those plastic materials out of our oceans
+            for a long time  please complete the information of the form. Our experts will receive your proposal and notice you as soon as possible.  
+        </p>
+
+        <div>
+            <dx-form id="form" [formData]="message" height="600px">
+                <dxi-item dataField="name" [label]="{text: 'Name'}"></dxi-item>
+                <dxi-item dataField="contact"></dxi-item>
+                <dxi-item
+                dataField="userType"
+                editorType="dxSelectBox"
+                [editorOptions]="{ items: userType }"
+                [label]="{text: 'Company or Sponsor'}"
+                ></dxi-item>
+                <dxi-item dataField="message" editorType="dxTextArea"
+                [editorOptions]="{ height: 110 }"></dxi-item>
+              </dx-form>
+              <dx-button
+                style="font-size: 22px;"
+                    stylingMode="contained"
+                    text="Send"
+                    type="normal"
+                    [width]="300"
+                    [height]="50"
+                >
+                </dx-button>
+        </div>
+    </dxi-item>
+</dx-responsive-box>

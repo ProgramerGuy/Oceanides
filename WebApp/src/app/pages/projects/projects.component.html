@@ -1,0 +1,97 @@
+<dx-responsive-box>
+    <dxi-row [ratio]="1"></dxi-row>
+    <dxi-row [ratio]="2" [shrink]="2"></dxi-row>
+    <dxi-row [ratio]="0.7"></dxi-row>
+    <dxi-col [ratio]="0.5" [shrink]="0.5"></dxi-col>
+
+    <dxi-col [ratio]="2" screen="md lg">
+    </dxi-col>
+    <dxi-col [ratio]="0.5" screen="md lg"></dxi-col>
+
+    <dxi-item class="content">
+        <dxi-location screen="md lg" [row]="1" [col]="1"></dxi-location>
+        <dxi-location screen="xs sm" [row]="1" [col]="0"></dxi-location>
+        <div class="main-page-title">
+            <h1 data-aos="fade-left">Gallery of Projects</h1>
+            <h5>You can check one of our main projects here</h5>
+        </div>
+        <h3> Projects </h3>
+        <h4>
+            Recycled Building Project by Ricardo Garcia (sponsored by Rcl2 Company) 
+        </h4>
+        <div class="display-divide-container" style="height: 400px;">
+            <div data-aos="fade-right" class="display-main-left display-data">
+                <p>
+                    This project was submitted by “Ricardo García” from México.
+                </p>
+                <p>
+                    The main idea was to create a construction system that relies on the creation of a plastic “brick/block” resembling the LEGO® toys. 
+                </p>
+                <p>
+                    This makes the process faster, lighter and cheaper. Perfect to cover the necessities of people in the southeast coast of mexico. The implementation of plastic in the bricks, allows the houses to have a better humidity resistance which is one of the primary problems in those places.
+                </p>
+            </div>
+            <div class="display-main-right">
+                <img data-aos="zoom-in" src="../../../assets/pj1.png" width="100%" height="100%"  alt="">
+            </div>
+        </div>
+        
+        <div class="display-divide-container" style="height: 400px;">
+            <div class="display-main-left">
+                <img src="../../../assets/pj2.png" width="100%" height="100%" alt="">
+            </div>
+            <div class="display-main-right display-data">
+                <h4>
+                    The challenges
+                </h4>
+                <p>
+                    Not every project starts with smooth steps, we first created a completely new process for building houses or extensions. We went through a large amount of materials that helped us cover the building policies, and safety requirements. The building process is sustained by modules, designed by specialist architects .
+                </p>
+            </div>
+        </div>
+
+        <div class="display-divide-container" style="height: 400px;">
+            <div class="display-main-left display-data">
+                <h4>
+                   Benefits of this project
+                </h4>
+                <p>
+                    The brick was created by reusing post industrial HDPE (High Density Polyethylene), keeping it for reaching other manufacturers that might use it for bags, straws, etc.  
+                </p>
+                <p>
+                    Due the project focus on building houses, we make sure this plastico won't come to our ocean in a long time, allowing us to reuse it for a long term product.
+                </p>  
+            </div>
+            <div class="display-main-right">
+                <img src="../../../assets/pj4.png" width="100%" height="100%"  alt="">
+            </div>
+        </div>
+
+        <div class="display-divide-container" style="height: 400px;">
+            <div class="display-main-left display-data">
+                <h4>
+                   Contribute with this project
+                </h4>
+                <p>
+                    If you have an idea for this project make sure to complete the form specifying this project and your feature contribution.  
+                </p>
+                <a [routerLink]="['/apply']">
+                    Fill the ideas form
+                </a> 
+            </div>
+            <div class="display-main-right  display-data">
+                <h4>
+                    Sponsor/Parter with this project
+                </h4>
+                <p>
+                    If you want to contribute by sponsoring this project to make it more scalable and becoming a partner.
+                </p>
+                <a [routerLink]="['/apply']">
+                    Fill the sponsor form
+                </a> 
+            </div>
+        </div>
+        
+
+    </dxi-item>
+</dx-responsive-box>

@@ -5,6 +5,10 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
+import { MissionComponent } from './pages/mission/mission.component';
+import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
+import { ApplyComponent } from './pages/apply/apply.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
   {
@@ -15,6 +19,26 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'who-we-are',
+    component: WhoWeAreComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mission',
+    component: MissionComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'apply',
+    component: ApplyComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
     canActivate: [ AuthGuardService ]
   },
   {
@@ -48,7 +72,6 @@ const routes: Routes = [
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [
-    HomeComponent,
     ProfileComponent,
   ]
 })
